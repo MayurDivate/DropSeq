@@ -2,7 +2,7 @@
 
 <h3> Step 1: generate digital gene expression for Human and Mouse </h3> 
 Use Dropseq tools to this </br>
-<h3> Step 3: Using data using genes_transcripts.R or genes_transcripts_batch.R</h3>   
+<h3> Step 2: Using data using genes_transcripts.R or genes_transcripts_batch.R</h3>   
 </br>
 
 <h3>Sample Genes violin plot</h3>
