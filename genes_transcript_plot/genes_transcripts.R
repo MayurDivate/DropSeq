@@ -4,6 +4,7 @@
 
 
 # load human and mouse dge summary file 
+setwd("~/Work/0_GitHub/DropSeq/genes_transcript_plot/")
 HumanFile <- "SRR1873277_Human.dge.summary.txt"
 MouseFile <- "SRR1873277_Mouse.dge.summary.txt"
 
@@ -40,9 +41,12 @@ dfHM[dfHM$Species == "Mouse",11] = dfHM[dfHM$Species == "Mouse",4]
 mg <- round(mean(dfHM[dfHM$Species == "Mouse",4]),2)
 dfV <- dfHM[dfHM$Species != "Mixed",c(9,10,11)] 
   
+
 c <- data.frame(sample =c(plotTitle) , ht ,mt,hg, mg)
 
 jpeg(plotGimg,width = 1000, height = 1000, quality = 100,res=200)
+
+head(dfV)
 
 plot <- ggplot(dfV,aes( Species, genes,colour = Species))
 plot <- plot + geom_violin()
